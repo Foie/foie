@@ -2,23 +2,27 @@
   "name": "foie",
   "version": "0.0.2",
   "description": "duck-like typing system for js",
-  "main": "foie.js",
+  "main": "dist/foie.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt && grunt test",
+    "build": "npm install && grunt"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mjdesa/foie.git"
+    "url": "https://github.com/Foie/foie.git"
   },
   "keywords": [
+    "javascript",
+    "foie",
+    "library",
     "type"
   ],
-  "author": "Michael Desa",
+  "author": "Foie Organization and Contributers",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mjdesa/foie/issues"
+    "url": "https://github.com/Foie/foie/issues"
   },
-  "homepage": "https://github.com/mjdesa/foie",
+  "homepage": "http://Foie.github.io/foie",
   "dependencies": {
     "async": "^0.9.0",
     "pg": "^4.2.0",
@@ -26,7 +30,10 @@
     "underscore": "^1.7.0"
   },
   "devDependencies": {
-    "assert": "^1.3.0",
+    "chai": "^2.1.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.1.0"
   }
 }
