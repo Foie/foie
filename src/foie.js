@@ -3,9 +3,9 @@ var _ = require('underscore');
 var async = require('async');
 
 //NEED BETTER WAY TO REQUIRE MODELS
-var models = [require('../tests/examples/models/userModel.js'),
-  require('../tests/examples/models/nameModel.js'),
-  require('../tests/examples/models/lameModel.js')
+var models = [require('../test/examples/models/userModel.js'),
+  require('../test/examples/models/nameModel.js'),
+  require('../test/examples/models/lameModel.js')
 ];
 
 
