@@ -4,7 +4,8 @@
   var app = angular.module('foieApp', [
    'foieApp.services',
    'foieApp.controllers',
-   'foieApp.directives'
+   'foieApp.directives',
+   'ngRoute'
   ]);
 
   module.exports = {

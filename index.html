@@ -15,7 +15,13 @@
   <script type='text/javascript' src='app/public/javascripts/index.js'></script>
 
 </head>
-<body>
-  {{'coming soon..'}}
+<body ng-controller='main as main'>
+  
+  <div ng-include="main.shared('nav')">
+  </div>
+  
+  <div class="container">
+    <ng-view></ng-view>
+  </div>
 </body>
 </html>

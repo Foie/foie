@@ -36393,7 +36393,8 @@ return jQuery;
   var app = angular.module('foieApp', [
    'foieApp.services',
    'foieApp.controllers',
-   'foieApp.directives'
+   'foieApp.directives',
+   'ngRoute'
   ]);
 
   module.exports = {
@@ -36410,7 +36411,17 @@ return jQuery;
 },{"../app.js":5}],7:[function(require,module,exports){
 (function () {
   'use strict';
-  this.controller('main', [])
+  function Main ($scope) {
+    this.$scope = $scope;
+    this.pageTitle = 'Foie Docs';
+  }
+  Main.prototype.shared = function (name) {
+    return 'app/public/views/shared/' + name + '.html';
+  }
+  Main.$inject = [
+                    '$scope'
+                  ];
+  this.controller('main', Main)
 }).call(require('./index.js'));
 },{"./index.js":6}],8:[function(require,module,exports){
 (function () {
@@ -36421,6 +36432,13 @@ return jQuery;
 },{"../app.js":5}],9:[function(require,module,exports){
 (function () {
   'use strict';
+  this.main.config(["$routeProvider", function ($routeProvider) {
+    var views = "app/public/views";
+    $routeProvider.
+      when('/', {
+        templateUrl: views + "/main/index.html"
+      })
+  }]);
 }).call(require('./app.js'));
 },{"./app.js":5}],10:[function(require,module,exports){
 (function () {
@@ -36429,4 +36447,4 @@ return jQuery;
   this.services = angular.module('foieApp.services', []);
   module.exports = this.services;
 }).call(require('../app.js'));
-},{"../app.js":5}]},{},[2,1,4,3,6,7,8,9,10,5]);
+},{"../app.js":5}]},{},[2,1,4,3,5,6,7,8,9,10]);
