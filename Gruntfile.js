@@ -12,7 +12,9 @@ module.exports = function(grunt) {
               {path: 'jquery/dist/jquery.js', component: true},
               {path: 'bootstrap/dist/js/bootstrap.min.js', component: true},
               {path: '**/*.js'},
-              {path: '!index.js'}
+              {path: '!**/app.js'},
+              {path: '!index.js'},
+              {path: '**/app.js'}
             ])
       }
     },
